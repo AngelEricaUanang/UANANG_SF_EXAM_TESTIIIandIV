@@ -1,0 +1,11 @@
+[
+  {"model":"clinic.specialty","pk":1,"fields":{"name":"Family Medicine","slug":"family-medicine"}},
+  {"model":"clinic.specialty","pk":2,"fields":{"name":"Pediatrics","slug":"pediatrics"}},
+  {"model":"clinic.specialty","pk":3,"fields":{"name":"Dermatology","slug":"dermatology"}},
+  {"model":"clinic.doctor","pk":1,"fields":{"full_name":"Dr. Ana Reyes","specialty":1,"bio":"Primary care physician focused on preventive care and everyday health concerns.","consultation_fee":"650.00","photo":"doctors/lea.png","is_accepting":true}},
+  {"model":"clinic.doctor","pk":2,"fields":{"full_name":"Dr. Miguel Santos","specialty":2,"bio":"Pediatrician providing child wellness visits and family-centered care.","consultation_fee":"800.00","photo":"doctors/lea.png","is_accepting":true}},
+  {"model":"clinic.doctor","pk":3,"fields":{"full_name":"Dr. Lea Cruz","specialty":3,"bio":"Dermatology consultations for common skin, hair, and nail concerns.","consultation_fee":"950.00","photo":"doctors/lea.png","is_accepting":true}},
+  {"model":"clinic.doctor","pk":4,"fields":{"full_name":"Dr. Paolo Garcia","specialty":1,"bio":"Family medicine practitioner supporting routine and continuing patient care.","consultation_fee":"700.00","photo":"doctors/lea.png","is_accepting":false}},
+  {"model":"clinic.doctor","pk":5,"fields":{"full_name":"Dr. Mara Villanueva","specialty":2,"bio":"Pediatric physician interested in preventive care and adolescent wellness.","consultation_fee":"850.00","photo":"doctors/lea.png","is_accepting":true}},
+  {"model":"clinic.doctor","pk":6,"fields":{"full_name":"Dr. Nico Ramos","specialty":3,"bio":"Dermatology physician providing outpatient evaluation and follow-up care.","consultation_fee":"900.00","photo":"doctors/lea.png","is_accepting":true}}
+]
