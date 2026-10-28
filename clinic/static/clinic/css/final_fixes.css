@@ -11,3 +11,7 @@
 .management-toolbar .tabs{width:100%;max-width:none;min-width:0;margin:0;overflow:hidden}
 .management-toolbar>.secondary{flex:0 0 auto;white-space:nowrap;max-width:160px}
 @media(max-width:720px){.resultline span{max-width:100%;margin-left:0;text-align:left}.management-toolbar{grid-template-columns:1fr}.management-toolbar>.secondary{max-width:none;width:100%}}
+
+/* Doctor form page */
+.doctor-form-shell{max-width:900px;margin:0 auto}.doctor-form-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--shadow-sm);overflow:hidden}.doctor-form-card .form-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.doctor-form-card label{display:block;min-width:0;font-size:12px;font-weight:750;color:#36545f}.doctor-form-card label>span{display:block;margin-bottom:6px}.doctor-form-card input,.doctor-form-card select,.doctor-form-card textarea{display:block;width:100%;max-width:100%;min-width:0}.doctor-form-card input[type="checkbox"]{width:auto}.doctor-form-card small{display:block;margin-top:5px;overflow-wrap:anywhere}.doctor-form-card small[role="alert"]{color:#9d3d3d}.doctor-admin-head .actions{display:flex;gap:8px;align-items:center}.doctor-admin-head .actions a{flex:none}
+@media(max-width:720px){.doctor-form-card{padding:20px}.doctor-form-card .form-grid{grid-template-columns:1fr}.doctor-admin-head{align-items:stretch;flex-direction:column;gap:14px}.doctor-admin-head .actions{display:grid;grid-template-columns:1fr 1fr}}
