@@ -1,0 +1,1 @@
+<div class="slots">{% for value,label in slots %}<button type="button" :class="{selected:slot==='{{value}}'}" @click="slot='{{value}}'" {% if value in booked %}disabled{% endif %}>{{label}}</button>{% empty %}<span>Select a date to load slots.</span>{% endfor %}</div><input type="hidden" name="time_slot" x-model="slot">

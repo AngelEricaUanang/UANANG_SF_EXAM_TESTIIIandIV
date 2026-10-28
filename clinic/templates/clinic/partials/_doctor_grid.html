@@ -1,0 +1,1 @@
+<div id="doctor-grid"><div class="resultline"><strong>{{ doctors|length }} doctor{{ doctors|length|pluralize }}</strong><span>Updated just now</span></div><div class="doctor-grid">{% for d in doctors %}{% include 'clinic/partials/_doctor_card.html' %}{% empty %}<div class="empty">No doctors match your search. Try another specialty or keyword.</div>{% endfor %}</div></div>
