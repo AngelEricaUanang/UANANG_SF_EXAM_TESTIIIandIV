@@ -1,7 +1,7 @@
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseNotFound
 from django.shortcuts import get_object_or_404,render,redirect
 from .models import Doctor,Appointment,Specialty
-from .forms import AppointmentForm
+from .forms import AppointmentForm,DoctorForm
 
 def is_hx(r): return r.headers.get('HX-Request')=='true'
 def doctor_list(request):
@@ -27,6 +27,12 @@ def slots(request,pk):
     return render(request,'clinic/partials/_slot_options.html',{'slots':Appointment.SLOTS,'booked':booked})
 def confirmation(request,pk): return render(request,'clinic/appointment_success.html',{'appointment':get_object_or_404(Appointment,pk=pk)})
 def doctor_manage(request): return render(request,'clinic/doctor_manage.html',{'doctors':Doctor.objects.all()})
+def doctor_create(request):
+    form=DoctorForm(request.POST or None,request.FILES or None)
+    if request.method=='POST' and form.is_valid():
+        form.save()
+        return redirect('doctor_manage')
+    return render(request,'clinic/doctor_form.html',{'form':form})
 def appointment_manage(request): return render(request,'clinic/appointment_manage.html',{'appointments':Appointment.objects.select_related('doctor').all()})
 def appointment_action(request,pk,action):
     a=get_object_or_404(Appointment,pk=pk); a.status='Confirmed' if action=='confirm' else 'Cancelled'; a.save(update_fields=['status'])
