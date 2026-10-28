@@ -1,0 +1,13 @@
+/* Final visual containment fixes */
+.hero .eyebrow{padding-left:8px;max-width:100%;overflow:hidden}
+.resultline{gap:16px;flex-wrap:wrap}
+.resultline span{margin-left:auto;max-width:46%;text-align:right;overflow-wrap:anywhere}
+.summary-item{grid-template-columns:24px minmax(0,1fr)}
+.summary-icon{display:flex;align-items:center;justify-content:center;flex:0 0 24px;width:24px;height:24px;padding:0;line-height:1;text-align:center}
+.booking-card .form-grid>label{min-width:0}
+.booking-card input,.booking-card select,.booking-card textarea{width:100%;max-width:100%;min-width:0}
+.booking-card small[role="alert"]{display:block;max-width:100%;overflow-wrap:anywhere;word-break:normal;line-height:1.35}
+.management-toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center}
+.management-toolbar .tabs{width:100%;max-width:none;min-width:0;margin:0;overflow:hidden}
+.management-toolbar>.secondary{flex:0 0 auto;white-space:nowrap;max-width:160px}
+@media(max-width:720px){.resultline span{max-width:100%;margin-left:0;text-align:left}.management-toolbar{grid-template-columns:1fr}.management-toolbar>.secondary{max-width:none;width:100%}}
