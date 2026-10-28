@@ -1,11 +1,14 @@
 [
   {"model":"clinic.specialty","pk":1,"fields":{"name":"Family Medicine","slug":"family-medicine"}},
-  {"model":"clinic.specialty","pk":2,"fields":{"name":"Pediatrics","slug":"pediatrics"}},
+  {"model":"clinic.specialty","pk":2,"fields":{"name":"Cardiology","slug":"cardiology"}},
   {"model":"clinic.specialty","pk":3,"fields":{"name":"Dermatology","slug":"dermatology"}},
-  {"model":"clinic.doctor","pk":1,"fields":{"full_name":"Dr. Ana Reyes","specialty":1,"bio":"Primary care physician focused on preventive care and everyday health concerns.","consultation_fee":"650.00","photo":"doctors/lea.png","is_accepting":true}},
-  {"model":"clinic.doctor","pk":2,"fields":{"full_name":"Dr. Miguel Santos","specialty":2,"bio":"Pediatrician providing child wellness visits and family-centered care.","consultation_fee":"800.00","photo":"doctors/lea.png","is_accepting":true}},
-  {"model":"clinic.doctor","pk":3,"fields":{"full_name":"Dr. Lea Cruz","specialty":3,"bio":"Dermatology consultations for common skin, hair, and nail concerns.","consultation_fee":"950.00","photo":"doctors/lea.png","is_accepting":true}},
-  {"model":"clinic.doctor","pk":4,"fields":{"full_name":"Dr. Paolo Garcia","specialty":1,"bio":"Family medicine practitioner supporting routine and continuing patient care.","consultation_fee":"700.00","photo":"doctors/lea.png","is_accepting":false}},
-  {"model":"clinic.doctor","pk":5,"fields":{"full_name":"Dr. Mara Villanueva","specialty":2,"bio":"Pediatric physician interested in preventive care and adolescent wellness.","consultation_fee":"850.00","photo":"doctors/lea.png","is_accepting":true}},
-  {"model":"clinic.doctor","pk":6,"fields":{"full_name":"Dr. Nico Ramos","specialty":3,"bio":"Dermatology physician providing outpatient evaluation and follow-up care.","consultation_fee":"900.00","photo":"doctors/lea.png","is_accepting":true}}
+  {"model":"clinic.doctor","pk":1,"fields":{"full_name":"Dr. Lea Santos","specialty":1,"bio":"Family medicine physician focused on preventive care, routine consultations, and continuing patient support.","consultation_fee":"1250.00","photo":"doctors/lea.png","is_accepting":true}},
+  {"model":"clinic.doctor","pk":2,"fields":{"full_name":"Dr. Miguel Reyes","specialty":2,"bio":"Cardiology physician providing outpatient heart-health evaluation and follow-up care.","consultation_fee":"1400.00","photo":"doctors/miguel.png","is_accepting":true}},
+  {"model":"clinic.doctor","pk":3,"fields":{"full_name":"Dr. Mara Cruz","specialty":3,"bio":"Dermatology physician providing consultation for common skin, hair, and nail concerns.","consultation_fee":"1100.00","photo":"doctors/mara.png","is_accepting":true}},
+  {"model":"clinic.doctor","pk":4,"fields":{"full_name":"Dr. Nico Ramos","specialty":1,"bio":"Primary care doctor supporting everyday health concerns and wellness follow-up.","consultation_fee":"900.00","photo":"doctors/nico.png","is_accepting":false}},
+  {"model":"clinic.doctor","pk":5,"fields":{"full_name":"Dr. Paolo Garcia","specialty":2,"bio":"Cardiology physician focused on assessment, counseling, and long-term care planning.","consultation_fee":"1500.00","photo":"doctors/paolo.png","is_accepting":true}},
+  {"model":"clinic.doctor","pk":6,"fields":{"full_name":"Dr. Ana Reyes","specialty":3,"bio":"Dermatology doctor providing outpatient skin evaluation and follow-up consultation.","consultation_fee":"1000.00","photo":"doctors/ana.png","is_accepting":true}},
+  {"model":"clinic.appointment","pk":31,"fields":{"doctor":1,"patient_name":"Angela Ramos","email":"angela@example.com","phone":"09171234567","appointment_date":"2026-10-30","time_slot":"10:00","visit_type":"In-Clinic","reason":"Routine consultation and follow-up care.","status":"Pending"}},
+  {"model":"clinic.appointment","pk":30,"fields":{"doctor":2,"patient_name":"Marco Dela Cruz","email":"marco@example.com","phone":"09181234567","appointment_date":"2026-10-30","time_slot":"13:00","visit_type":"Teleconsultation","reason":"Follow-up consultation about recent test results.","status":"Confirmed"}},
+  {"model":"clinic.appointment","pk":29,"fields":{"doctor":3,"patient_name":"Sofia Navarro","email":"sofia@example.com","phone":"09191234567","appointment_date":"2026-10-29","time_slot":"14:00","visit_type":"In-Clinic","reason":"Consultation for a recurring skin concern.","status":"Cancelled"}}
 ]
