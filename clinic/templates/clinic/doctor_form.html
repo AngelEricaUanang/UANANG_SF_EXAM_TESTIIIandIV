@@ -1,0 +1,32 @@
+{% extends 'clinic/base.html' %}
+{% block title %}Add Doctor · MediBook Management{% endblock %}
+{% block content %}
+<section class="doctor-form-shell">
+  <div class="pagehead">
+    <div>
+      <p class="eyebrow">Clinic management</p>
+      <h1>Add doctor</h1>
+      <p class="lead">Create a clinic doctor profile with specialty, consultation fee, photo, and accepting status.</p>
+    </div>
+    <a class="secondary" href="/manage/doctors/">Back to doctors</a>
+  </div>
+  <form class="doctor-form-card" method="post" enctype="multipart/form-data" novalidate>
+    {% csrf_token %}
+    {% if form.non_field_errors %}<div class="error" role="alert">{{ form.non_field_errors }}</div>{% endif %}
+    <div class="form-grid">
+      {% for field in form %}
+      <label class="{% if field.name == 'bio' or field.name == 'photo' %}full{% endif %}">
+        <span>{{ field.label }}</span>
+        {{ field }}
+        {% if field.help_text %}<small class="muted">{{ field.help_text }}</small>{% endif %}
+        {% for error in field.errors %}<small role="alert">{{ error }}</small>{% endfor %}
+      </label>
+      {% endfor %}
+    </div>
+    <div class="row">
+      <a class="secondary" href="/manage/doctors/">Cancel</a>
+      <button class="primary" type="submit">Save doctor</button>
+    </div>
+  </form>
+</section>
+{% endblock %}
