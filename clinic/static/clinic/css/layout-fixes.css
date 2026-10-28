@@ -1,0 +1,105 @@
+/* Final containment/alignment fixes */
+.brand-mark{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 38px;
+  width:38px;
+  height:38px;
+  padding:0;
+  line-height:1;
+  text-align:center;
+  font-weight:800;
+  overflow:hidden;
+}
+
+.booking-shell{
+  grid-template-columns:minmax(300px,.76fr) minmax(0,1.24fr);
+  gap:24px;
+}
+
+.booking-card{
+  min-width:0;
+  overflow:hidden;
+}
+.booking-card form,
+.booking-card [x-show],
+.booking-card .form-grid > *,
+.booking-card label{
+  min-width:0;
+  max-width:100%;
+}
+.booking-card input,
+.booking-card select,
+.booking-card textarea{
+  display:block;
+  width:100%;
+  max-width:100%;
+  min-width:0;
+}
+.booking-card .section-copy{
+  max-width:100%;
+  overflow-wrap:anywhere;
+}
+.booking-card .form-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.booking-card .slots{
+  width:100%;
+  max-width:100%;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  overflow:hidden;
+}
+.booking-card .slots button{
+  width:100%;
+  min-width:0;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.booking-card .row{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  width:100%;
+  max-width:100%;
+  align-items:center;
+}
+.booking-card .row > *{min-width:0}
+.booking-card .row .primary,
+.booking-card .row .secondary{
+  width:100%;
+  min-width:0;
+  white-space:normal;
+  text-align:center;
+  line-height:1.25;
+}
+
+.table-actions{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(96px,1fr));
+  gap:8px;
+  min-width:220px;
+  max-width:100%;
+}
+.data-table td:last-child,
+.data-table th:last-child{
+  min-width:220px;
+}
+.table-actions .mini-btn{
+  width:100%;
+  min-width:0;
+  padding:8px 12px;
+  border-radius:999px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  text-align:center;
+}
+
+@media(max-width:720px){
+  .booking-card .form-grid{grid-template-columns:1fr}
+  .booking-card .slots{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .table-actions{grid-template-columns:1fr 1fr;min-width:0}
+  .data-table td:last-child,.data-table th:last-child{min-width:180px}
+}
